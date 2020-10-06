@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
+      - name: Run lint
+        run: npm test
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
         with:
